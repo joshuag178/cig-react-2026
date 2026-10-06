@@ -3,6 +3,7 @@
 // instalado. A partir de la sesion 2 se reemplaza por el panel de gestion.
 
 import "./App.css";
+import TarjetaOrden from "./components/TarjetaOrden";
 
 function App() {
   // Valor leido del archivo .env. Si aparece "no configurada", falta copiar
@@ -14,8 +15,9 @@ function App() {
       <p className="bienvenida__etiqueta">Colegio de Ingenieros de Guatemala</p>
 
       <h1 className="bienvenida__titulo">React para Frontend Profesional</h1>
-
+      
       <p className="bienvenida__texto">
+        <TarjetaOrden />
         El entorno esta funcionando. Si ve esta pantalla, el proyecto quedo
         instalado correctamente y puede llegar a la primera sesion listo para
         programar.

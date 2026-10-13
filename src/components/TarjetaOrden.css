@@ -56,3 +56,15 @@
     font-size: 1.1rem;
     text-align: right;
 }
+
+.tarjeta__acciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--espacio-1);
+    margin-top: var(--espacio-2);
+}
+
+.tarjeta__boton {
+    padding: 0.25rem var(--espacio-2);
+    font-size: 0.8rem;
+}

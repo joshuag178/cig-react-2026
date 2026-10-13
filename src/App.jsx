@@ -1,57 +1,72 @@
-// Componente raiz de la aplicacion.
-// Esta pantalla de bienvenida existe para confirmar que el entorno quedo bien
-// instalado. A partir de la sesion 2 se reemplaza por el panel de gestion.
+// App es el unico archivo que sabe de donde salen los datos.
+// En la sesion 4 esta linea se cambia por una llamada a la API y
+// ningun otro componente se modifica.
+import { useState } from "react";
+import { ordenes as ordenesIniciales } from "./data/datos.js";
+import BarraFiltros from "./components/BarraFiltros.jsx";
 
+
+import Panel from "./components/Panel.jsx";
+import ResumenOrdenes from "./components/ResumenOrdenes.jsx";
+import ListaOrdenes from "./components/ListaOrdenes.jsx";
 import "./App.css";
-import TarjetaOrden from "./components/TarjetaOrden.jsx";
-import EtiquetaEstado from "./components/EtiquetaEstado.jsx";
-import { ordenes } from "./data/datos.js";
+
+function normalizar(texto) {
+  return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
+// Una funcion de comparacion por cada criterio de orden.
+const COMPARADORES = {
+  fecha: (a, b) => b.fecha.localeCompare(a.fecha), // mas recientes primero
+  monto: (a, b) => b.monto - a.monto, // mayor monto primero
+  codigo: (a, b) => a.codigo.localeCompare(b.codigo),
+};
 
 function App() {
-  // Valor leido del archivo .env. Si aparece "no configurada", falta copiar
-  // .env.example como .env. Se usa de verdad hasta la sesion 4.
-  const urlApi = import.meta.env.VITE_API_URL || "no configurada";
+
+  const [ordenes, setOrdenes] = useState(ordenesIniciales);
+  const [busqueda, setBusqueda] = useState("");
+  const [departamento, setDepartamento] = useState("");
+  const [criterio, setCriterio] = useState("fecha");
+
+  // DERIVADO: se calcula en cada render. No se guarda en otro useState.
+  // [...ordenes] copia el arreglo antes de ordenar: sort modifica el original.
+  const texto = normalizar(busqueda.trim());
+  const ordenesVisibles = [...ordenes]
+    .sort(COMPARADORES[criterio])
+    .filter((orden) => departamento === "" || orden.departamento === departamento)
+    .filter(
+      (orden) =>
+        normalizar(orden.codigo).includes(texto) ||
+        normalizar(orden.cliente).includes(texto)
+    );
 
   return (
-    <div className="bienvenida">
-      <p className="bienvenida__etiqueta">Colegio de Ingenieros de Guatemala</p>
+    <div className="contenedor">
+      <header className="cabecera">
+        <p className="cabecera__etiqueta">Serviclima, S.A.</p>
+        <h1>Panel de ordenes de servicio</h1>
+      </header>
 
-      <h1 className="bienvenida__titulo">React para Frontend Profesional</h1>
+      <Panel titulo="Resumen">
+        <ResumenOrdenes ordenes={ordenesVisibles} />
+      </Panel>
 
-      <p className="bienvenida__texto">
-        {ordenes.map((orden) => {
-          return (
-            <>
-              <div className="bienvenida__tarjeta">
-                <TarjetaOrden key={orden.id} orden={orden} />
-              </div>
-            </>
-          );
-        })}
-        
-        El entorno esta funcionando. Si ve esta pantalla, el proyecto quedo
-        instalado correctamente y puede llegar a la primera sesion listo para
-        programar.
-      </p>
+      <Panel titulo={`Ordenes registradas (${ordenesVisibles.length} de ${ordenes.length})`}>
+        <BarraFiltros
+          busqueda={busqueda}
+          departamento={departamento}
+          criterio={criterio}
+          onBusquedaChange={setBusqueda}
+          onDepartamentoChange={setDepartamento}
+          onCriterioChange={setCriterio}
+        />
+        <ListaOrdenes
+          ordenes={ordenesVisibles}
+          mensajeVacio="Ninguna orden coincide con los filtros."
+        />
+      </Panel>
 
-      <div className="bienvenida__tarjeta">
-        <h2 className="bienvenida__subtitulo">Verificacion del entorno</h2>
-        <dl className="bienvenida__lista">
-          <dt>Servidor de desarrollo</dt>
-          <dd>activo en el puerto 5173</dd>
-
-          <dt>Variable VITE_API_URL</dt>
-          <dd>{urlApi}</dd>
-
-          <dt>Backend local</dt>
-          <dd>se activa en la sesion 4 con npm run api</dd>
-        </dl>
-      </div>
-
-      <p className="bienvenida__nota">
-        Proyecto del curso: panel de gestion de ordenes de servicio de
-        Serviclima, S.A.
-      </p>
     </div>
   );
 }

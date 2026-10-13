@@ -128,25 +128,66 @@ a {
 /* ---------- Etiquetas de estado ---------- */
 
 .etiqueta {
-  display: inline-block;
-  padding: 0.15rem var(--espacio-1);
-  border-radius: 999px;
-  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.65rem;
+  font-family: var(--fuente-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.03em;
   text-transform: capitalize;
-  color: #2b2b2b;
+  color: var(--color-texto);
+  border: 1px solid var(--color-borde);
+  border-radius: 999px;
+  box-shadow: var(--sombra);
 }
 
+.etiqueta::before {
+  width: 0.5rem;
+  height: 0.5rem;
+  flex: 0 0 auto;
+  content: "";
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* El fondo identifica el estado y el punto refuerza la lectura visual. */
 .etiqueta--pendiente {
   background-color: var(--color-pendiente);
 }
+
+.etiqueta--pendiente::before {
+  color: var(--color-pendiente);
+  filter: brightness(0.65);
+}
+
 .etiqueta--proceso {
   background-color: var(--color-proceso);
 }
+
+.etiqueta--proceso::before {
+  color: var(--color-proceso);
+  filter: brightness(0.65);
+}
+
 .etiqueta--completada {
   background-color: var(--color-completada);
 }
+
+.etiqueta--completada::before {
+  color: var(--color-completada);
+  filter: brightness(0.65);
+}
+
 .etiqueta--cancelada {
   background-color: var(--color-cancelada);
+}
+
+.etiqueta--cancelada::before {
+  color: var(--color-cancelada);
+  filter: brightness(0.65);
 }
 
 /* ---------- Mensajes de estado de la interfaz ---------- */

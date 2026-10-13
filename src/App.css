@@ -2,7 +2,7 @@
    Este archivo se reemplaza por completo a partir de la sesion 2. */
 
 .bienvenida {
-  max-width: 640px;
+  max-width: 840px;
   margin: 0 auto;
   padding: var(--espacio-5) var(--espacio-3);
 }

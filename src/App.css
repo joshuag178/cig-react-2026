@@ -1,13 +1,11 @@
-/* Estilos de la pantalla de bienvenida.
-   Este archivo se reemplaza por completo a partir de la sesion 2. */
+/* Estilos propios del componente raiz. La pantalla de bienvenida
+   de la sesion 1 se reemplaza por completo. */
 
-.bienvenida {
-  max-width: 840px;
-  margin: 0 auto;
-  padding: var(--espacio-5) var(--espacio-3);
+.cabecera {
+  margin-bottom: var(--espacio-4);
 }
 
-.bienvenida__etiqueta {
+.cabecera__etiqueta {
   margin-bottom: var(--espacio-1);
   font-size: 0.8rem;
   letter-spacing: 0.08em;
@@ -15,46 +13,11 @@
   color: var(--color-texto-suave);
 }
 
-.bienvenida__titulo {
-  margin-bottom: var(--espacio-3);
+/* Mensaje de error con su boton de Reintentar (sesion 4). */
+.mensaje--error p {
+  margin: 0 0 var(--espacio-1) 0;
 }
 
-.bienvenida__texto {
-  color: var(--color-texto-suave);
-}
-
-.bienvenida__tarjeta {
-  margin: var(--espacio-4) 0;
-  padding: var(--espacio-3);
-  border: 1px solid var(--color-borde);
-  border-radius: var(--radio);
-  background-color: var(--color-superficie);
-  box-shadow: var(--sombra);
-}
-
-.bienvenida__subtitulo {
-  font-size: 1rem;
-  color: var(--color-texto-suave);
-}
-
-.bienvenida__lista {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: var(--espacio-1) var(--espacio-2);
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-.bienvenida__lista dt {
-  color: var(--color-texto-suave);
-}
-
-.bienvenida__lista dd {
-  margin: 0;
-  font-family: var(--fuente-mono);
-}
-
-.bienvenida__nota {
-  font-size: 0.85rem;
-  color: var(--color-texto-suave);
+.mensaje--error .boton {
+  margin-top: var(--espacio-1);
 }

@@ -1,6 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 import ListadoOrdenes from "./pages/ListadoOrdenes.jsx";
+import NuevaOrden from "./pages/NuevaOrden.jsx";
+import DetalleOrden from "./pages/DetalleOrden.jsx";
+import EditarOrden from "./pages/EditarOrden.jsx";
 
 import "./App.css";
 
@@ -14,10 +17,9 @@ function App() {
         {/* index: la ruta "/" */}
         <Route index element={<ListadoOrdenes />} />
         {/* Fija: gana a ordenes/:id aunque las dos coincidan con /ordenes/nueva */}
-
-        {/* Las rutas del detalle y la edicion se agregan en la parte 6 */}
-        {/* Comodin: cualquier ruta que ninguna otra reconocio */}
-
+        <Route path="ordenes/nueva" element={<NuevaOrden />} />
+        <Route path="ordenes/:id" element={<DetalleOrden />} />
+        <Route path="ordenes/:id/editar" element={<EditarOrden />} />
       </Route>
     </Routes>
   );

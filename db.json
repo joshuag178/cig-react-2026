@@ -10,7 +10,7 @@
       "tecnico": "Mario Ixcot",
       "fecha": "2026-01-14",
       "horas": 3.5,
-      "monto": 1750.0,
+      "monto": 1750,
       "estado": "completada"
     },
     {
@@ -22,8 +22,8 @@
       "categoria": "Instalación",
       "tecnico": "Lucía Morales",
       "fecha": "2026-01-22",
-      "horas": 8.0,
-      "monto": 6400.0,
+      "horas": 8,
+      "monto": 6400,
       "estado": "en proceso"
     },
     {
@@ -36,7 +36,7 @@
       "tecnico": "Mario Ixcot",
       "fecha": "2026-02-03",
       "horas": 5.25,
-      "monto": 3150.0,
+      "monto": 3150,
       "estado": "pendiente"
     },
     {
@@ -48,8 +48,8 @@
       "categoria": "Mantenimiento preventivo",
       "tecnico": "Ana Chacón",
       "fecha": "2026-02-09",
-      "horas": 2.0,
-      "monto": 1000.0,
+      "horas": 2,
+      "monto": 1000,
       "estado": "completada"
     },
     {
@@ -62,7 +62,7 @@
       "tecnico": "Byron Tzul",
       "fecha": "2026-02-17",
       "horas": 6.5,
-      "monto": 3900.0,
+      "monto": 3900,
       "estado": "completada"
     },
     {
@@ -74,8 +74,8 @@
       "categoria": "Instalación",
       "tecnico": "Lucía Morales",
       "fecha": "2026-02-25",
-      "horas": 10.0,
-      "monto": 8000.0,
+      "horas": 10,
+      "monto": 8000,
       "estado": "en proceso"
     },
     {
@@ -88,7 +88,7 @@
       "tecnico": "Ana Chacón",
       "fecha": "2026-03-04",
       "horas": 1.5,
-      "monto": 600.0,
+      "monto": 600,
       "estado": "completada"
     },
     {
@@ -100,8 +100,8 @@
       "categoria": "Mantenimiento preventivo",
       "tecnico": "Mario Ixcot",
       "fecha": "2026-03-11",
-      "horas": 4.0,
-      "monto": 2000.0,
+      "horas": 4,
+      "monto": 2000,
       "estado": "pendiente"
     },
     {
@@ -113,8 +113,8 @@
       "categoria": "Reparación",
       "tecnico": "Byron Tzul",
       "fecha": "2026-03-18",
-      "horas": 3.0,
-      "monto": 1800.0,
+      "horas": 3,
+      "monto": 1800,
       "estado": "cancelada"
     },
     {
@@ -126,8 +126,8 @@
       "categoria": "Mantenimiento preventivo",
       "tecnico": "Silvia Pérez",
       "fecha": "2026-03-26",
-      "horas": 5.0,
-      "monto": 2500.0,
+      "horas": 5,
+      "monto": 2500,
       "estado": "completada"
     },
     {
@@ -140,7 +140,7 @@
       "tecnico": "Ana Chacón",
       "fecha": "2026-04-02",
       "horas": 7.25,
-      "monto": 4350.0,
+      "monto": 4350,
       "estado": "en proceso"
     },
     {
@@ -152,8 +152,8 @@
       "categoria": "Instalación",
       "tecnico": "Silvia Pérez",
       "fecha": "2026-04-10",
-      "horas": 12.0,
-      "monto": 9600.0,
+      "horas": 12,
+      "monto": 9600,
       "estado": "pendiente"
     },
     {
@@ -166,7 +166,7 @@
       "tecnico": "Byron Tzul",
       "fecha": "2026-04-15",
       "horas": 2.5,
-      "monto": 1250.0,
+      "monto": 1250,
       "estado": "completada"
     },
     {
@@ -178,8 +178,8 @@
       "categoria": "Mantenimiento preventivo",
       "tecnico": "Mario Ixcot",
       "fecha": "2026-04-23",
-      "horas": 9.0,
-      "monto": 4500.0,
+      "horas": 9,
+      "monto": 4500,
       "estado": "completada"
     },
     {
@@ -192,7 +192,7 @@
       "tecnico": "Silvia Pérez",
       "fecha": "2026-05-06",
       "horas": 4.75,
-      "monto": 2850.0,
+      "monto": 2850,
       "estado": "pendiente"
     },
     {
@@ -204,8 +204,8 @@
       "categoria": "Diagnóstico",
       "tecnico": "Lucía Morales",
       "fecha": "2026-05-13",
-      "horas": 1.0,
-      "monto": 400.0,
+      "horas": 1,
+      "monto": 400,
       "estado": "completada"
     },
     {
@@ -218,7 +218,7 @@
       "tecnico": "Byron Tzul",
       "fecha": "2026-05-21",
       "horas": 11.5,
-      "monto": 6900.0,
+      "monto": 6900,
       "estado": "en proceso"
     },
     {
@@ -230,8 +230,8 @@
       "categoria": "Mantenimiento preventivo",
       "tecnico": "Ana Chacón",
       "fecha": "2026-05-28",
-      "horas": 3.0,
-      "monto": 1500.0,
+      "horas": 3,
+      "monto": 1500,
       "estado": "completada"
     },
     {
@@ -243,8 +243,8 @@
       "categoria": "Mantenimiento preventivo",
       "tecnico": "Silvia Pérez",
       "fecha": "2026-06-04",
-      "horas": 2.0,
-      "monto": 1000.0,
+      "horas": 2,
+      "monto": 1000,
       "estado": "cancelada"
     },
     {
@@ -256,8 +256,8 @@
       "categoria": "Instalación",
       "tecnico": "Mario Ixcot",
       "fecha": "2026-06-11",
-      "horas": 14.0,
-      "monto": 11200.0,
+      "horas": 14,
+      "monto": 11200,
       "estado": "pendiente"
     },
     {
@@ -270,7 +270,7 @@
       "tecnico": "Lucía Morales",
       "fecha": "2026-06-18",
       "horas": 1.5,
-      "monto": 600.0,
+      "monto": 600,
       "estado": "completada"
     },
     {
@@ -283,7 +283,7 @@
       "tecnico": "Byron Tzul",
       "fecha": "2026-06-25",
       "horas": 8.5,
-      "monto": 5100.0,
+      "monto": 5100,
       "estado": "pendiente"
     },
     {
@@ -295,8 +295,8 @@
       "categoria": "Mantenimiento preventivo",
       "tecnico": "Ana Chacón",
       "fecha": "2026-07-02",
-      "horas": 6.0,
-      "monto": 3000.0,
+      "horas": 6,
+      "monto": 3000,
       "estado": "completada"
     },
     {
@@ -309,8 +309,34 @@
       "tecnico": "Silvia Pérez",
       "fecha": "2026-07-09",
       "horas": 9.5,
-      "monto": 7600.0,
+      "monto": 7600,
       "estado": "pendiente"
+    },
+    {
+      "cliente": "Josué García",
+      "nit": "19021239-5",
+      "departamento": "Chimaltenango",
+      "categoria": "Reparación",
+      "tecnico": "Oswaldo Lopez",
+      "fecha": "2026-10-19",
+      "horas": 4,
+      "monto": 900,
+      "estado": "pendiente",
+      "id": 25,
+      "codigo": "OS-2026-025"
+    },
+    {
+      "cliente": "Jose Perez",
+      "nit": "1234578-5",
+      "departamento": "Sacatepéquez",
+      "categoria": "Diagnóstico",
+      "tecnico": "Fredy Lopez",
+      "fecha": "2026-10-19",
+      "horas": 4,
+      "monto": 1000,
+      "estado": "pendiente",
+      "id": 26,
+      "codigo": "OS-2026-026"
     }
   ]
 }

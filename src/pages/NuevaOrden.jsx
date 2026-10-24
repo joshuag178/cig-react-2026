@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Panel from "../components/Panel.jsx";
 import FormularioOrden from "../components/FormularioOrden.jsx";
-import { crearOrden } from "../services/ordenes.js";
+import { crearOrden } from "../services/Ordenes.js";
 
 // Vista de la ruta /ordenes/nueva.
 function NuevaOrden() {

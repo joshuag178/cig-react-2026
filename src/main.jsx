@@ -16,7 +16,9 @@ import "./styles/global.css";
 const raiz = document.getElementById("root");
 createRoot(raiz).render(
   <StrictMode>
-    <BrowserRouter>
+    {/* basename: "/" en local; "/nombre-del-repositorio/" en GitHub Pages.
+        Vite lo toma de la opcion base de vite.config.js. */}
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <App />
     </BrowserRouter>
   </StrictMode>

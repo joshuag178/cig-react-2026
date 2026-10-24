@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import Panel from "../components/Panel.jsx";
 import TarjetaOrden from "../components/TarjetaOrden.jsx";
 import { useFetch } from "../hooks/useFetch.js";
-import { obtenerOrden, eliminarOrden } from "../services/ordenes.js";
+import { obtenerOrden, eliminarOrden } from "../services/Ordenes.js";
 
 // Vista de la ruta /ordenes/:id
 function DetalleOrden() {

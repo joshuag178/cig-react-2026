@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Panel from "../components/Panel.jsx";
 import FormularioOrden from "../components/FormularioOrden.jsx";
 import { useFetch } from "../hooks/useFetch.js";
-import { obtenerOrden, actualizarOrden } from "../services/ordenes.js";
+import { obtenerOrden, actualizarOrden } from "../services/Ordenes.js";
 
 // Vista de la ruta /ordenes/:id/editar
 function EditarOrden() {

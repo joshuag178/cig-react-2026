@@ -4,7 +4,7 @@ import Panel from "../components/Panel.jsx";
 import ResumenOrdenes from "../components/ResumenOrdenes.jsx";
 import ListaOrdenes from "../components/ListaOrdenes.jsx";
 import { useFetch } from "../hooks/useFetch.js";
-import { obtenerOrdenes, cambiarEstado } from "../services/ordenes.js";
+import { obtenerOrdenes, cambiarEstado } from "../services/Ordenes.js";
 
 // Vista de la ruta "/". Es la App de la sesion 4 casi sin cambios:
 // se movio aqui, sin la cabecera (ahora en Layout) y sin el formulario
